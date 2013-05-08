@@ -1,3 +1,6 @@
+ 
+python application.py
+
 # Configuracion
 
 El fichero config.py tiene las propiedades
