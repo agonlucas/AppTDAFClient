@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-
-import web
+try:
+    import web
+except ImportError:
+    print "No server"
 import urllib2 
 import urllib 
 import sender
@@ -21,14 +23,15 @@ urls = (
 
 
 if __name__ == "__main__":
-    app = web.application(urls, globals())
-    #response = urllib2.urlopen(url)
-    #print response.code
-    #print response.info()['date']
-    #print response.read()
-    #response.close()
+    try:
+        app = web.application(urls, globals())
+    except NameError:
+        print ""
 
     sender.startSender()
     
     # Servidor en localhost:8080
-    app.run()
+    try:
+        app.run()
+    except NameError:
+           print "" 

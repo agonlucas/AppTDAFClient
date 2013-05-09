@@ -9,7 +9,8 @@ from threading import Thread
 def threadSender(url, i, t, n_req):
     num_request = 0
     #json_data = {'entityType': 'device', 'entityId': 'M2M-Device-Test', 'data': {'measure': 'temperature', 'value': 12, 'uom': 'Cel'}}
-    json_data = {'entityType': 'device', 'entityId': 'M2M-Device-Test', 'data': 'Testing'}
+    #json_data = {'entityType': 'device', 'entityId': 'M2M-Device-Test', 'data': 'Testing'}
+    json_data = "{'entityType': 'device', 'entityId': 'M2M-Device-Test-" + str(i) + "', 'data': 'Testing'}"
     post_data = json.dumps(json_data)
      
     # POST
