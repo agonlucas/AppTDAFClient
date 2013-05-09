@@ -2,11 +2,11 @@
  
 python application.py o application.py
 
-Se envían peticiones en cada thread con entityId M2M-Device-Test-<num_thread>
+Se envían peticiones en cada thread con entityId M2M-Device-Test-num_thread
 Si se arrancan 3 threads los threads se numeran del 0 al 2.
 
-TransactionInfo es 69
-entityType es device
+TransactionInfo es 69.
+entityType es device.
 
 # Configuracion
 
