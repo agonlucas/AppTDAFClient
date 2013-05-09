@@ -12,7 +12,7 @@ def threadSender(url, i, t, n_req):
     #json_data = {'entityType': 'device', 'entityId': 'M2M-Device-Test', 'data': 'Testing'}
     device = 'M2M-Device-Test-' + str(i);
     data = 'Testing ' + device;
-    json_data = "{'entityType': 'device', 'entityId': '" + device + "', 'data': '" + data + "'}"
+    json_data = '{"entityType": "device", "entityId": "' + device + '", "data": "' + data + '"}'
     post_data = json.dumps(json_data)
      
     # POST
@@ -22,8 +22,8 @@ def threadSender(url, i, t, n_req):
             clen = len(post_data)
             headers = {'TransactionInfo': '69', 'Content-Type': 'application/json', 'Content-Lenght': clen}
             request = urllib2.Request(url, post_data, headers);
-            result = urllib2.urlopen(request) 
-            #print result.read()
+            result = urllib2.urlopen(url=request, data=None,timeout=3) 
+            print result.read()
             result.close()
         except urllib2.URLError, e: 
             print e.reason
