@@ -17,7 +17,7 @@ def threadSender(url, i, t, n_req):
      
     # POST
     while (num_request < n_req):
-        print "Sending to %s in thread num %d\n" % (url,i)
+        print "Sending to %s from  %s\n" % (url,device)
         try:
             clen = len(post_data)
             headers = {'TransactionInfo': '69', 'Content-Type': 'application/json', 'Content-Lenght': clen}
